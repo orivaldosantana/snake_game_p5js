@@ -12,6 +12,11 @@ class Snake {
     return this.body
   }
 
+  setDirection(dx, dy) {
+    this.xDirection = dx
+    this.yDirection = dy
+  }
+
   move() {
     let posHead = {}
     // last position

@@ -56,3 +56,22 @@ function draw() {
   // - - - Game Logic - - //
   snake.move()
 }
+
+function keyPressed() {
+  //seta para baixo
+  if (key == 'ArrowDown') {
+    snake.setDirection(0, 1)
+  }
+  //seta para cima
+  if (key == 'ArrowUp') {
+    snake.setDirection(0, -1)
+  }
+  //seta para esquerda
+  if (key == 'ArrowLeft') {
+    snake.setDirection(-1, 0)
+  }
+  //seta para direita
+  if (key == 'ArrowRight') {
+    snake.setDirection(1, 0)
+  }
+}
