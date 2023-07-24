@@ -1,6 +1,6 @@
 /* 
 Roteiro:
-1 - Area do jogo (Classe)
+1 - Área do jogo (Classe)
   - Desenha grade 
   - Desenha borda
 2 - Comidas 
@@ -29,13 +29,21 @@ Roteiro:
   
 Referências: 
 - Código das setas do teclado https://p5js.org/reference/#/p5/keyCode 
+- Design https://www.figma.com/file/QxjSTSSXWs6qoKodKlzF0a/Snake-Game?type=design&node-id=28-11&mode=design&t=KKuOBQjRTSqAFzF0-4 
 */
+
+const bgColor = '#101010'
+const whiteColor = '#F1F1F1'
+
+let gameArea
 
 function setup() {
   createCanvas(695, 695)
+  gameArea = new GameArea()
 }
 
 function draw() {
-  background(220)
-  text('Snake', width / 2, height / 2)
+  background(bgColor)
+  gameArea.showGrid()
+  gameArea.showBorder()
 }
