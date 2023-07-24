@@ -1,5 +1,7 @@
 # Snake Game P5.js
 
+## Roteiro
+
 1 - Área do jogo (Classe)
 
 - Desenha grade
@@ -25,7 +27,7 @@
 
 5 - Colisão com paredes
 
-- Vídeo:
+- Vídeo: https://youtu.be/GHHyDX_rKSk
 
 6 - Cabeçalho com as informações do jogo
 
@@ -52,3 +54,7 @@
 
 - Se chegar em zero, vai para tela de game over
 - Vídeo:
+
+## Experimento o Jogo
+
+Link para o jogo: https://orivaldosantana.github.io/snake_game_p5js/
