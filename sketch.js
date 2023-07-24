@@ -9,7 +9,7 @@ Roteiro:
 3 - Cobra 
   - Definição inicial, "Array" de posições 
   - Estratégia de movimentação 
-  - Desenha o corpo da cobra na área de desenho 
+  - Desenha o corpo da cobra na área de jogo 
 4 - Movimentação com o teclado 
 5 - Colisão com paredes 
 6 - Cabeçalho com as informações do jogo 
@@ -39,12 +39,20 @@ let gameArea
 
 function setup() {
   createCanvas(695, 695)
+  frameRate(10)
   gameArea = new GameArea()
+  snake = new Snake()
+
+  gameArea.setSnakeBody(snake.getBody())
 }
 
 function draw() {
   background(bgColor)
   gameArea.showGrid()
   gameArea.showFoods()
+  gameArea.showSnakeBody()
   gameArea.showBorder()
+
+  // - - - Game Logic - - //
+  snake.move()
 }

@@ -8,6 +8,7 @@ class GameArea {
     this.yStart = 120
     this.foods = []
     this.generateFoods(2)
+    this.snakeBody = []
   }
 
   generateFoods(amout) {
@@ -25,6 +26,22 @@ class GameArea {
       rect(
         this.cellSize * this.foods[f].x,
         this.yStart + this.cellSize * this.foods[f].y,
+        this.cellSize,
+        this.cellSize
+      )
+    }
+  }
+
+  setSnakeBody(sb) {
+    this.snakeBody = sb
+  }
+
+  showSnakeBody() {
+    fill(whiteColor)
+    for (let i in this.snakeBody) {
+      rect(
+        this.cellSize * this.snakeBody[i].x,
+        this.yStart + this.cellSize * this.snakeBody[i].y,
         this.cellSize,
         this.cellSize
       )
