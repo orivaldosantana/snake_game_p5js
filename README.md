@@ -24,24 +24,31 @@
 - Vídeo: https://youtu.be/IrtTNIIX0-M
 
 5 - Colisão com paredes
+
+- Vídeo:
+
 6 - Cabeçalho com as informações do jogo
 
 - Método para aumentar a pontuação
 - Método para diminuir a vida
 - Método para aumentar o nível
+- Vídeo:
 
 7 - Colisão com comidas - retorna o índice
 
 - Cresce o tamanho da cobra
 - Aumenta a pontuação
 - Se comer todas as comidas segue para o próximo nível
+- Vídeo:
 
 8 - Aumenta de nível
 
 - Amenta a quantidade de comidas
 - Cria novas comidas no cenário
 - Atualiza o tamanho da cobra
+- Vídeo:
 
 9 - Retira um vida
 
 - Se chegar em zero, vai para tela de game over
+- Vídeo:

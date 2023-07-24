@@ -11,6 +11,19 @@ class GameArea {
     this.snakeBody = []
   }
 
+  isWallCollision(snakeHead) {
+    let collision = false
+    if (
+      snakeHead.x < 0 ||
+      snakeHead.x >= this.xSize ||
+      snakeHead.y < 0 ||
+      snakeHead.y >= this.ySize
+    ) {
+      collision = true
+    }
+    return collision
+  }
+
   generateFoods(amout) {
     for (let i = 0; i < amout; i++) {
       let posFood = {}

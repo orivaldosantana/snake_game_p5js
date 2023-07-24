@@ -54,7 +54,9 @@ function draw() {
   gameArea.showBorder()
 
   // - - - Game Logic - - //
-  snake.move()
+  if (!gameArea.isWallCollision(snake.getNextMove())) {
+    snake.move()
+  }
 }
 
 function keyPressed() {
