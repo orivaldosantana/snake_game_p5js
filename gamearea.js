@@ -4,7 +4,31 @@ class GameArea {
     this.ySize = 19
     this.cellSize = 30
     this.lineColor = '#303030'
+    this.foodColor = '#1FDE00'
     this.yStart = 120
+    this.foods = []
+    this.generateFoods(2)
+  }
+
+  generateFoods(amout) {
+    for (let i = 0; i < amout; i++) {
+      let posFood = {}
+      posFood.x = parseInt(random(0, this.xSize))
+      posFood.y = parseInt(random(0, this.ySize))
+      this.foods.push(posFood)
+    }
+  }
+
+  showFoods() {
+    fill(this.foodColor)
+    for (let f in this.foods) {
+      rect(
+        this.cellSize * this.foods[f].x,
+        this.yStart + this.cellSize * this.foods[f].y,
+        this.cellSize,
+        this.cellSize
+      )
+    }
   }
 
   showBorder() {

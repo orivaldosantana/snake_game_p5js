@@ -45,5 +45,6 @@ function setup() {
 function draw() {
   background(bgColor)
   gameArea.showGrid()
+  gameArea.showFoods()
   gameArea.showBorder()
 }
