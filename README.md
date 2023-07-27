@@ -55,6 +55,6 @@
 - Se chegar em zero, vai para tela de game over
 - Vídeo:
 
-## Experimento o Jogo
+## Experimente o Jogo
 
 Link para o jogo: https://orivaldosantana.github.io/snake_game_p5js/
