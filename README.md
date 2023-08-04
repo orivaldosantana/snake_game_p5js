@@ -1,5 +1,11 @@
 # Snake Game P5.js
 
+## Introdução
+
+Este é um repositório para fins didáticos para introdução de conceitos de Orientação a Objetos, na prática. Este repositório contém os códigos desenvolvidos em várias etapas e seus respectivos vídeos.
+
+Uma ilustração do design inicial do jogo pode ser visualizada em: [https://www.figma.com/Orivaldo/Snake-Game](https://www.figma.com/file/QxjSTSSXWs6qoKodKlzF0a/Snake-Game?type=design&node-id=28-11&mode=design&t=HyP7V6NwGa6VkOK3-4) .
+
 ## Roteiro
 
 1 - Área do jogo (Classe)

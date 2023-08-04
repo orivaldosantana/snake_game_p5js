@@ -34,12 +34,14 @@ Referências:
 
 const bgColor = '#101010'
 const whiteColor = '#F1F1F1'
+const grayColor = '#303030'
 
 let gameArea
 
 function setup() {
   createCanvas(695, 695)
   frameRate(10)
+  header = new Header('Snake Game')
   gameArea = new GameArea()
   snake = new Snake()
 
@@ -48,6 +50,7 @@ function setup() {
 
 function draw() {
   background(bgColor)
+  header.show()
   gameArea.showGrid()
   gameArea.showFoods()
   gameArea.showSnakeBody()
