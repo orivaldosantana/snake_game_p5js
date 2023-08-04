@@ -7,7 +7,7 @@ class GameArea {
     this.foodColor = '#1FDE00'
     this.yStart = 120
     this.foods = []
-    this.generateFoods(2)
+
     this.snakeBody = []
   }
 
@@ -45,8 +45,27 @@ class GameArea {
     }
   }
 
+  // Checa se a cabeça da cobra colidiu com a comida e qual o seu indice no vetor de comidas
+  foodCollision(snakeHead) {
+    const found = this.foods.findIndex(
+      e => e.x == snakeHead.x && e.y == snakeHead.y
+    )
+    return found
+  }
+
+  removeFood(foodIndex) {
+    this.foods.splice(foodIndex, 1)
+  }
+
   setSnakeBody(sb) {
     this.snakeBody = sb
+  }
+
+  hasFood() {
+    if (this.foods.length != 0) {
+      return true
+    }
+    return false
   }
 
   showSnakeBody() {

@@ -25,6 +25,19 @@ class Snake {
     return nextMove
   }
 
+  resetBody() {
+    this.body.length = 0
+    this.body.push({ x: 1, y: 1 })
+    this.body.push({ x: 2, y: 1 })
+    this.body.push({ x: 3, y: 1 })
+    this.xDirection = 1
+    this.yDirection = 0
+  }
+
+  grow() {
+    this.body.push(this.getNextMove())
+  }
+
   move() {
     let posHead = {}
     // last position

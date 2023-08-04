@@ -40,26 +40,26 @@ Uma ilustração do design inicial do jogo pode ser visualizada em: [https://www
 - Método para aumentar a pontuação
 - Método para diminuir a vida
 - Método para aumentar o nível
-- Vídeo:
+- Vídeo: https://youtu.be/eEvJSxCSWck
 
 7 - Colisão com comidas - retorna o índice
 
 - Cresce o tamanho da cobra
 - Aumenta a pontuação
 - Se comer todas as comidas segue para o próximo nível
-- Vídeo:
+- Vídeo: https://www.youtube.com/watch?v=iJqpFkXSVMo&t=140s
 
 8 - Aumenta de nível
 
 - Amenta a quantidade de comidas
 - Cria novas comidas no cenário
 - Atualiza o tamanho da cobra
-- Vídeo:
+- Vídeo: https://www.youtube.com/watch?v=iJqpFkXSVMo&t=1708s
 
 9 - Retira um vida
 
 - Se chegar em zero, vai para tela de game over
-- Vídeo:
+- Vídeo: https://www.youtube.com/watch?v=iJqpFkXSVMo&t=2455s
 
 ## Experimente o Jogo
 

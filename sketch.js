@@ -37,6 +37,9 @@ const whiteColor = '#F1F1F1'
 const grayColor = '#303030'
 
 let gameArea
+let foodAmout = 2
+
+let screen = 'play'
 
 function setup() {
   createCanvas(695, 695)
@@ -46,9 +49,10 @@ function setup() {
   snake = new Snake()
 
   gameArea.setSnakeBody(snake.getBody())
+  gameArea.generateFoods(foodAmout)
 }
 
-function draw() {
+function playGame() {
   background(bgColor)
   header.show()
   gameArea.showGrid()
@@ -57,8 +61,42 @@ function draw() {
   gameArea.showBorder()
 
   // - - - Game Logic - - //
-  if (!gameArea.isWallCollision(snake.getNextMove())) {
+  let foodIndex = gameArea.foodCollision(snake.getNextMove())
+  if (foodIndex != -1) {
+    console.log('Food: ' + foodIndex)
+    gameArea.removeFood(foodIndex)
+    header.increaseScore()
+    snake.grow()
+    if (!gameArea.hasFood()) {
+      foodAmout = foodAmout + 2
+      gameArea.generateFoods(foodAmout)
+      header.increaseLevel()
+      snake.resetBody()
+    }
+  } else if (gameArea.isWallCollision(snake.getNextMove())) {
+    if (!header.reduceLife()) {
+      screen = 'end'
+    }
+    snake.resetBody()
+  } else {
     snake.move()
+  }
+}
+
+function gameOverScreen() {
+  background(bgColor)
+  fill(whiteColor)
+  stroke(grayColor)
+  textAlign(CENTER)
+  textSize(70)
+  text('Game Over', width / 2, height / 2)
+}
+
+function draw() {
+  if (screen == 'play') {
+    playGame()
+  } else if (screen == 'end') {
+    gameOverScreen()
   }
 }
 
